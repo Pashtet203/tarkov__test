@@ -1,0 +1,29 @@
+$orange: #FFC165;
+$green: #00B285;
+$dark-green:#038f6c;
+$lite-gray: #C9C9C9;
+$beige: #CEC7A6;
+$gray:#ABABAB;
+$brown: #1e1e1e;
+$lite-brown:#363636;
+
+@mixin subTitle {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    color: $beige;
+}
+
+@mixin mainContent{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $lite-gray;
+}
+
+@mixin mainDesc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: gray;
+}

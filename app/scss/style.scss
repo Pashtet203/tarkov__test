@@ -1,0 +1,284 @@
+@import "_nullstyle";
+@import "_global";
+@import "_variables";
+@import "_popup";
+
+body{
+    background-color: #1E1E1E;
+}
+
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+
+    &__inner{
+        width: 1200px;
+        margin-top: 58px;
+        display: flex;     
+        justify-content: space-between;
+        padding: 0 45px;
+    }
+    &__desc{
+        background-color: #363636;
+        font-weight: 500;
+        color:$orange ;
+        padding: 8px 16px;
+        max-width: 300px;
+        border-radius: 3px;
+    }
+    &__title{
+        margin: 37px 0 14px 0;
+        color: $green;
+        font-weight: 600;
+        font-size: 42px;
+    }
+    &__text{
+        color: $lite-gray;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 42px;
+    }
+    &__btn{
+        background-color: $green;
+        color: #FFF;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 32px;
+        padding: 8px 32px;
+        border-radius: 3px;
+        margin-top: 53px;
+    }
+    &__canvas{
+        width: 540px;
+        height: 183px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            margin-top: 136px;
+            z-index: -1;
+            background:linear-gradient(358.76deg,#00B285 3.73%, rgba(0, 178, 133, 0) 96.55%);
+            border-radius: 10px;
+        }
+    }
+    &__img{
+        object-fit: cover;
+        z-index: -1;
+        width: auto;
+        height: auto;
+    }
+}
+
+.main{
+    &__title{
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 42px;
+        color: $green;
+    }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 81px;
+    }
+    &__content{
+        max-width: 730px;
+        padding-right: 10px;
+    }
+    &__subtitle{
+        @include subTitle;
+        margin-top: 24px;
+        margin-bottom: 10px;
+    }
+    &__desc{
+        @include mainDesc;
+        margin-top: 8px;
+    }
+    &__text{
+        @include mainContent;
+    }
+    &__list{
+
+        &-item{
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: $lite-gray;
+        }
+    }
+    &__rules, &__requirements{
+        li{
+            font-weight: 400;
+        }
+    }
+    &__side{
+        display: flex;
+        flex-direction: column;
+        &-btn{
+            margin-top: 24px;
+            border: 1px solid $green;
+            color: $green;
+            background-color: transparent;
+            padding: 8px 32px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 32px;
+            color: $green;
+            align-self: flex-end;
+            border-radius: 5px;
+        }
+    }
+    &__time{
+        padding: 10px 25px;
+        background-color: #363636;
+        border-radius: 5px;
+        &-title{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 28px;
+            color: #fff;
+        }
+        &-text{
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 28px;
+            color: $beige;
+        }
+    }
+    &__map{
+        max-width: 340px;
+        height: 194px;
+        border-radius: 11px;
+        background-image: url(../img/map_tamojnya.jpg);
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        margin-top: 24px;
+        &-title{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+            color: $beige;
+            padding-left: 20px;
+        }
+        &-name{
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: #FFF;
+            padding-bottom: 14px;
+            padding-left: 20px;
+        }
+    }
+}
+
+.reward{
+    &__title{
+        @include subTitle;
+        margin-top: 24px;
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+    }
+    &__place{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        flex-wrap: wrap;
+        &-item{
+            min-width: 255px;
+            height: 90px;
+            background-color:#363636;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+        &-box{
+            padding-left: 20px;
+            padding-top: 14px;
+        }
+        &-num{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: $green;
+        }
+        &-prize{
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 32px;
+            color: $orange;
+        }
+    }
+    &__extra{
+        min-height: 52px;
+        background-color: #363636;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: $beige;
+        padding: 14px 0 14px 20px;
+        margin-top: 34px;
+    }
+}
+.sponsors{
+    &__title{
+        @include subTitle;
+        margin-top: 24px;
+    }
+    &__inner{
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item + &__item{
+        margin-left: 10px;
+    }
+    &__item{
+        min-width: 255px;
+        min-height: 90px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        background-color: #363636;
+        margin-bottom: 8px;
+
+        &-avatar{
+            padding-left: 16px;
+            padding: 0 16px;
+            border-radius: 50%;
+        }
+        &-nick{
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: $green;
+        }
+    }
+}
+
+
+
+
+.orange{
+    color: $orange;
+}
+.green{
+    color: $green;
+}
+.gray{
+    font-weight: 400;
+}
+
+
+
+@import "_media";
